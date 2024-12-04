@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "X00185050_CA3_Blazor/1.0.0": {
+        "runtime": {
+          "X00185050_CA3_Blazor.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "X00185050_CA3_Blazor/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

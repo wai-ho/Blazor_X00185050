@@ -1,0 +1,96 @@
+﻿@page "/movies"
+@inject HttpClient Http
+@inject IConfiguration Configuration
+
+<h3>Popular Movies</h3>
+
+@if (movies == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <div class="row">
+        @foreach (var movie in movies.Results)
+        {
+            <div class="col-md-3 mb-3">
+                <div class="card border border-secondary">
+                    <a href="#" class="card-link">
+                        <img src="https://image.tmdb.org/t/p/w500/@movie.Poster_Path" class="card-img-top" alt="@movie.Title" />
+                    </a>
+                    <div class="card-body">
+                        <a href="#" class="card-title h5 card-link">@movie.Title</a>
+                        <p class="card-text pt-2">Rating: 
+                            <span class="border border-1 border-secondary rounded-3 p-1" 
+                            style="background-color: @(movie.Vote_Average switch {
+                                < 5 => "#FF1D18",
+                                >= 5 and < 6 =>  "#FF6865",
+                                >= 6 and < 7 => "#FFC78F",
+                                >= 7 and < 8 => "#83F28F",
+                                > 8 => "#00C04B",
+                                _ => "transparent"
+                            });">@movie.Vote_Average/10</span>
+                        </p>
+                        <p class="card-text">Released: 
+                            <span class="fw-bold">@movie.FormatDate()</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+}
+
+@code {
+    private MovieResult? movies;
+
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            var apiKey = Configuration["TMDB:APIKey"];
+
+            var apiUrl = $"https://api.themoviedb.org/3/movie/popular?api_key={apiKey}&language=en-US&page=1";
+
+            movies = await Http.GetFromJsonAsync<MovieResult>(apiUrl);
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error fetching movies: {ex.Message}");
+        }
+    }
+
+    // Classes to deserialize TMDB API response
+    public class MovieResult
+    {
+        public List<Movie> Results { get; set; } = new();
+    }
+
+    public class Movie
+    {
+        public string Title { get; set; } = string.Empty;
+        public string Poster_Path { get; set; } = string.Empty;
+        public double vote_Average;
+        public DateOnly Release_Date { get; set; }
+
+        public double Vote_Average
+        {
+            get => Math.Round(vote_Average, 1);
+            set => vote_Average = value;
+        }
+
+        public string FormatDate()
+        {
+            var date = Release_Date.ToDateTime(TimeOnly.MinValue);
+            int day = date.Day;
+            string suffix = day switch
+            {
+                1 or 21 or 31 => "st",
+                2 or 22 => "nd",
+                3 or 23 => "rd",
+                _ => "th"
+            };
+            return $"{day}{suffix} {date:MMMM yyyy}";
+        }
+    }
+}
