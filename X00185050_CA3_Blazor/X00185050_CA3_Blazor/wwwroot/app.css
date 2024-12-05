@@ -51,9 +51,41 @@ h1:focus {
     border-color: #929292;
 }
 
+.navbar-brand {
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: black;
+    letter-spacing: 1.5px;
+
+    background-color: darkmagenta;
+}
+
+.navbar-brand:hover {
+    color: inherit; 
+    text-decoration: none !important; 
+}
+
 .top-row {
     background-image: linear-gradient(-25deg, violet, lightblue);
     border-bottom: none !important;
+}
+
+#search-field{
+    width: 400px ;
+    margin-left: 50px;
+}
+
+#search-button:hover{
+    background-color: dimgrey;
+}
+
+#search-button {
+    background-color: darkgrey;
+    color: white;
+    transform: scale(0.95);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
 #nav {
