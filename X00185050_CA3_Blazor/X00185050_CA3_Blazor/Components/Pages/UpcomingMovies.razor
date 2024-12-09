@@ -1,15 +1,8 @@
-﻿@page "/movies"
+﻿@page "/upcoming"
 @inject HttpClient Http
 @inject IConfiguration Configuration
 
-<h3>Popular Movies</h3>
-
-<div class="mb-3">
-    <select id="sortOrder" class="form-select w-auto">
-        <option value="desc">Sort By Release Date: Descending</option>
-        <option value="asc">Sort By Release Date: Ascending</option>
-    </select>
-</div>
+<h3>Upcoming Movies</h3>
 
 @if (movies == null)
 {
@@ -33,8 +26,9 @@ else
                             </span>
                         </p>
                         <p class="card-text">
-                            <span class="border border-1 border-secondary rounded-3 p-1" 
-                            style="background-color: @(movie.Vote_Average switch {
+                            Rating:
+                            <span class="border border-1 border-secondary rounded-3 p-1"
+                                  style="background-color: @(movie.Vote_Average switch {
                                 <= 0 => "lightgrey",
                                 > 0 and < 5 => "#FF1D18",
                                 >= 5 and < 6 =>  "#FF6865",
@@ -45,10 +39,9 @@ else
                             });">@movie.Vote_Average/10</span>
                         </p>
                         <p class="card-text">
+                            Released:
                             <span class="fw-bold">@movie.FormatDate()</span>
                         </p>
-                        <button class="btn btn-primary btn-sm">Add to Watchlist</button>
-
                     </div>
                 </div>
             </div>
@@ -59,39 +52,47 @@ else
 @code {
     private MovieResult? movies;
     private Dictionary<int, string> GenreDictionary = new();
-    private string selectedSortOrder = "desc";
 
     protected override async Task OnInitializedAsync()
     {
-        await FetchGenres();
-        await FetchMovies();
-    }
-
-    private async Task FetchMovies()
-    {
         try
         {
+            await FetchGenres();
+
             var apiKey = Configuration["TMDB:APIKey"];
-            var apiUrl = $"https://api.themoviedb.org/3/movie/popular?api_key={apiKey}&language=en-US&page=1";
+            var allMovies = new List<Movie>();
 
-            var movieResponse = await Http.GetFromJsonAsync<MovieResult>(apiUrl);
-            if (movieResponse != null)
+            for (int page = 1; page <= 5; page++)
             {
-                foreach (var movie in movieResponse.Results)
-                {
-                    movie.Genres = movie.Genre_Ids
-                        .Where(id => GenreDictionary.ContainsKey(id))
-                        .Select(id => GenreDictionary[id])
-                        .ToList();
-                }
+                var apiUrl = $"https://api.themoviedb.org/3/movie/upcoming?api_key={apiKey}&language=en-US&page={page}";
 
-                movies = new MovieResult
-                    {
-                        Results = selectedSortOrder == "asc" // CHANGES HERE
-                        ? movieResponse.Results.OrderBy(movie => movie.Release_Date).ToList() // Sort ascending // CHANGES HERE
-                        : movieResponse.Results.OrderByDescending(movie => movie.Release_Date).ToList() // Sort descending // CHANGES HERE
-                    };
+                var movieResponse = await Http.GetFromJsonAsync<MovieResult>(apiUrl);
+                if (movieResponse != null)
+                {
+                    var futureMovies = movieResponse.Results
+                            .Where(movie => movie.Release_Date > DateOnly.FromDateTime(DateTime.Now))
+                            .ToList();
+
+                    allMovies.AddRange(futureMovies);
+
+
+                }
             }
+
+            movies = new MovieResult
+            {
+                Results = allMovies.OrderBy(Movie => Movie.Release_Date).ToList()
+            };
+
+            foreach (var movie in movies.Results)
+            {
+                movie.Genres = movie.Genre_Ids
+                    .Where(id => GenreDictionary.ContainsKey(id))
+                    .Select(id => GenreDictionary[id])
+                    .ToList();
+            }
+
+            
         }
         catch (Exception ex)
         {
@@ -116,12 +117,6 @@ else
         {
             Console.WriteLine($"Error fetching genres: {ex.Message}");
         }
-    }
-
-    private async Task SortMovies(ChangeEventArgs e)
-    {
-        selectedSortOrder = e.Value?.ToString() ?? "desc";
-        await FetchMovies();
     }
 
     public class GenreResponse
@@ -172,3 +167,6 @@ else
         }
     }
 }
+
+}
+

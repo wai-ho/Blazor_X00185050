@@ -30,8 +30,16 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xIb21lLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/waiho/Blazor_X00185050/X00185050_CA3_Blazor/X00185050_CA3_Blazor/Components/Pages/MovieDetails.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xNb3ZpZURldGFpbHMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/waiho/Blazor_X00185050/X00185050_CA3_Blazor/X00185050_CA3_Blazor/Components/Pages/Movies.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xNb3ZpZXMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/waiho/Blazor_X00185050/X00185050_CA3_Blazor/X00185050_CA3_Blazor/Components/Pages/UpcomingMovies.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xVcGNvbWluZ01vdmllcy5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/waiho/Blazor_X00185050/X00185050_CA3_Blazor/X00185050_CA3_Blazor/Components/Routes.razor]
