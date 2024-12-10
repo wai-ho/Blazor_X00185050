@@ -1,9 +1,12 @@
 using X00185050_CA3_Blazor.Components;
+using X00185050_CA3_Blazor.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents();
+
+builder.Services.AddSingleton<WatchlistService>();
 
 builder.Logging.SetMinimumLevel(LogLevel.Debug);
 

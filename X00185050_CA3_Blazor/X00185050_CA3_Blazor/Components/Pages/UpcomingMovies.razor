@@ -1,6 +1,9 @@
 ﻿@page "/upcoming"
 @inject HttpClient Http
 @inject IConfiguration Configuration
+@inject WatchlistService WatchlistService
+@rendermode InteractiveServer
+@using X00185050_CA3_Blazor.Services
 
 <h3>Upcoming Movies</h3>
 
@@ -42,6 +45,7 @@ else
                             Released:
                             <span class="fw-bold">@movie.FormatDate()</span>
                         </p>
+                        <button class="btn btn-primary btn-sm" @onclick="() => AddToWatchlist(movie.Id)" >Add to Watchlist</button>
                     </div>
                 </div>
             </div>
@@ -117,6 +121,11 @@ else
         {
             Console.WriteLine($"Error fetching genres: {ex.Message}");
         }
+    }
+
+    private void AddToWatchlist(int movieId)
+    {
+        WatchlistService.AddToWatchlist(movieId);
     }
 
     public class GenreResponse

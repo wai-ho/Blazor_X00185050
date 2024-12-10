@@ -1,6 +1,10 @@
 ﻿@page "/movies"
 @inject HttpClient Http
 @inject IConfiguration Configuration
+@inject WatchlistService WatchlistService
+@rendermode InteractiveServer
+@using X00185050_CA3_Blazor.Services
+
 
 <h3>Popular Movies</h3>
 
@@ -47,7 +51,7 @@ else
                         <p class="card-text">
                             <span class="fw-bold">@movie.FormatDate()</span>
                         </p>
-                        <button class="btn btn-primary btn-sm">Add to Watchlist</button>
+                        <button class="btn btn-primary btn-sm" @onclick="() => AddToWatchlist(movie.Id)">Add to Watchlist</button>
 
                     </div>
                 </div>
@@ -87,9 +91,9 @@ else
 
                 movies = new MovieResult
                     {
-                        Results = selectedSortOrder == "asc" // CHANGES HERE
-                        ? movieResponse.Results.OrderBy(movie => movie.Release_Date).ToList() // Sort ascending // CHANGES HERE
-                        : movieResponse.Results.OrderByDescending(movie => movie.Release_Date).ToList() // Sort descending // CHANGES HERE
+                        Results = selectedSortOrder == "asc"
+                        ? movieResponse.Results.OrderBy(movie => movie.Release_Date).ToList() 
+                        : movieResponse.Results.OrderByDescending(movie => movie.Release_Date).ToList() 
                     };
             }
         }
@@ -116,6 +120,11 @@ else
         {
             Console.WriteLine($"Error fetching genres: {ex.Message}");
         }
+    }
+
+    private void AddToWatchlist(int movieId)
+    {
+        WatchlistService.AddToWatchlist(movieId);
     }
 
     private async Task SortMovies(ChangeEventArgs e)

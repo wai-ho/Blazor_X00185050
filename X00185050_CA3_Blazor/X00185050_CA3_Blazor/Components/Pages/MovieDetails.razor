@@ -1,6 +1,10 @@
 ﻿@page "/movies/{id:int}"
 @inject HttpClient Http
 @inject IConfiguration Configuration
+@inject WatchlistService WatchlistService
+@rendermode InteractiveServer
+@using X00185050_CA3_Blazor.Services
+@using X00185050_CA3_Blazor.Models;
 
 <h3>Movie Details</h3>
 
@@ -53,20 +57,9 @@ else
         try
         {
             var apiKey = Configuration["TMDB:APIKey"];
-            if (string.IsNullOrWhiteSpace(apiKey))
-            {
-                Console.WriteLine("API Key is missing or invalid.");
-                return;
-            }
-
             var apiUrl = $"https://api.themoviedb.org/3/movie/{Id}?api_key={apiKey}&language=en-US";
-            Console.WriteLine($"Fetching movie details from: {apiUrl}");
 
             movie = await Http.GetFromJsonAsync<Movie>(apiUrl);
-            if (movie == null)
-            {
-                Console.WriteLine("Movie details could not be fetched or deserialized.");
-            }
         }
         catch (Exception ex)
         {
@@ -76,47 +69,11 @@ else
 
     private void AddToWatchlist()
     {
-        Console.WriteLine($"Movie '{movie?.Title}' with ID {Id} added to the watchlist!");
-    }
-
-    public class Movie
-    {
-        public string Title { get; set; } = string.Empty;
-        public string Poster_Path { get; set; } = string.Empty;
-        public double vote_Average;
-        public string Overview { get; set; } = string.Empty;
-        public DateOnly Release_Date { get; set; }
-        public List<Genre> Genres { get; set; } = new();
-        public string Tagline { get; set; } = string.Empty;
-        public int Runtime { get; set; }
-        public long Budget { get; set; }
-        public long Revenue { get; set; }
-        public string Homepage { get; set; } = string.Empty;
-
-        public double Vote_Average
+        if (movie != null)
         {
-            get => Math.Round(vote_Average, 1);
-            set => vote_Average = value;
-        }
-
-        public string FormatDate()
-        {
-            var date = Release_Date.ToDateTime(TimeOnly.MinValue);
-            int day = date.Day;
-            string suffix = day switch
-            {
-                1 or 21 or 31 => "st",
-                2 or 22 => "nd",
-                3 or 23 => "rd",
-                _ => "th"
-            };
-            return $"{day}{suffix} {date:MMMM yyyy}";
+            WatchlistService.AddToWatchlist(movie.Id);
         }
     }
 
-    public class Genre
-    {
-        public int Id { get; set; }
-        public string Name { get; set; } = string.Empty;
-    }
+
 }

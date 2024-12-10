@@ -157,3 +157,16 @@ h3, h1{
     height: 20%;
     margin: 10px;
 }
+
+.word{
+    font-size: 30px;
+}
+
+.home {
+    margin: 10%;
+    padding-left: 8%;
+    padding-right: 8%;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    font-size: 25px;
+}
