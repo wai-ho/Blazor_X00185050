@@ -18,32 +18,19 @@ else
     <div class="row">
         @foreach (var movie in watchlistMovies)
         {
-            <div class="col-md-3 mb-4">
-                <div class="card">
-                    <a href="/movies/@movie.Id" class="card-link">
-                    <img src="https://image.tmdb.org/t/p/w500/@movie.Poster_Path" class="card-img-top" alt="@movie.Title" />
+            <div class="watchlist_container card border border-secondary d-flex flex-row">
+
+                <a href="/movies/@movie.Id" class="card-link">
+                    <img src="https://image.tmdb.org/t/p/w500/@movie.Poster_Path" class="img_link" alt="@movie.Title" />
                     </a>
                     <div class="card-body">
                         <a href="/movies/@movie.Id" class="card-title h5 card-link">@movie.Title</a>
-                        
-                        <p class="card-text">
-                            <span class="border border-1 border-secondary rounded-3 p-1"
-                                  style="background-color: @(movie.Vote_Average switch {
-                                <= 0 => "lightgrey",
-                                > 0 and < 5 => "#FF1D18",
-                                >= 5 and < 6 =>  "#FF6865",
-                                >= 6 and < 7 => "#FFC78F",
-                                >= 7 and < 8 => "#83F28F",
-                                > 8 => "#00C04B",
-                                _ => "transparent"
-                            });">@movie.Vote_Average/10</span>
-                        </p>
-                        <p class="card-text">
-                            <span class="fw-bold">@movie.FormatDate()</span>
-                        </p>
+
+                    <p><strong>Description:</strong> @movie.Overview</p>
+                    <p><strong>Release Date:</strong> @movie.Release_Date.ToString("MMMM dd, yyyy")</p>
                         <button class="btn btn-danger btn-sm" @onclick="() => RemoveFromWatchlist(movie.Id)">Remove</button>
                     </div>
-                </div>
+                
             </div>
         }
     </div>

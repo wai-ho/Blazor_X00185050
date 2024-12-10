@@ -1,0 +1,136 @@
+﻿@page "/search"
+@inject HttpClient Http
+@inject NavigationManager Navigation
+@inject IConfiguration Configuration
+@inject WatchlistService WatchlistService
+@rendermode InteractiveServer
+@using X00185050_CA3_Blazor.Services
+
+
+<h3>Search Results</h3>
+
+@if (movies == null)
+{
+    <p><em>Loading...</em></p>
+}
+else if (!movies.Any())
+{
+    <p><em>No movies found for "@SearchQuery".</em></p>
+}
+else
+{
+    <div class="row">
+        @foreach (var movie in movies)
+        {
+            <div class="card-container col-md-3 mb-3">
+                <div class="card border border-secondary">
+                    <a href="/movies/@movie.Id" class="card-link">
+                        <img src="https://image.tmdb.org/t/p/w500/@movie.Poster_Path" class="card-img-top" alt="@movie.Title" />
+                    </a>
+                    <div class="card-body">
+                        <a href="/movies/@movie.Id" class="card-title h5 card-link">@movie.Title</a>
+                        <p>
+                            <span id="genre">
+                                @string.Join(", ", movie.Genres)
+                            </span>
+                        </p>
+                        <p class="card-text">
+                            <span class="border border-1 border-secondary rounded-3 p-1"
+                                  style="background-color: @(movie.Vote_Average switch {
+                                <= 0 => "lightgrey",
+                                > 0 and < 5 => "#FF1D18",
+                                >= 5 and < 6 =>  "#FF6865",
+                                >= 6 and < 7 => "#FFC78F",
+                                >= 7 and < 8 => "#83F28F",
+                                >= 8 => "#00C04B",
+                                _ => "transparent"
+                            });">@movie.Vote_Average/10</span>
+                        </p>
+                        <p class="card-text">
+                            <span class="fw-bold">@movie.FormatDate()</span>
+                        </p>
+                        <button class="btn btn-primary btn-sm" @onclick="() => AddToWatchlist(movie.Id)">Add to Watchlist</button>
+
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+}
+
+@code {
+    private List<Movie> movies = new();
+    private string? SearchQuery;
+
+    protected override async Task OnInitializedAsync()
+    {
+        var uri = new Uri(Navigation.Uri);
+        SearchQuery = System.Web.HttpUtility.ParseQueryString(uri.Query).Get("query");
+
+        if (!string.IsNullOrEmpty(SearchQuery))
+        {
+            await FetchSearchResults(SearchQuery);
+        }
+    }
+
+    private async Task FetchSearchResults(string query)
+    {
+        try
+        {
+            var apiKey = Configuration["TMDB:APIKey"];
+            var apiUrl = $"https://api.themoviedb.org/3/search/movie?api_key={apiKey}&query={query}&language=en-US";
+
+            var response = await Http.GetFromJsonAsync<SearchResponse>(apiUrl);
+            if (response?.Results != null)
+            {
+                movies = response.Results;
+            }
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error fetching search results: {ex.Message}");
+        }
+    }
+
+    public class SearchResponse
+    {
+        public List<Movie> Results { get; set; } = new();
+    }
+
+    private void AddToWatchlist(int movieId)
+    {
+        WatchlistService.AddToWatchlist(movieId);
+    }
+
+    public class Movie
+    {
+        public int Id { get; set; }
+        public string Title { get; set; } = string.Empty;
+        public string Poster_Path { get; set; } = string.Empty;
+        public double vote_Average;
+        public DateOnly Release_Date { get; set; }
+        public List<int> Genre_Ids { get; set; } = new();
+
+        public List<string> Genres { get; set; } = new();
+
+        public double Vote_Average
+        {
+            get => Math.Round(vote_Average, 1);
+            set => vote_Average = value;
+        }
+
+        public string FormatDate()
+        {
+            var date = Release_Date.ToDateTime(TimeOnly.MinValue);
+            int day = date.Day;
+            string suffix = day switch
+            {
+                1 or 21 or 31 => "st",
+                2 or 22 => "nd",
+                3 or 23 => "rd",
+                _ => "th"
+            };
+            return $"{day}{suffix} {date:MMMM yyyy}";
+        }
+    }
+}

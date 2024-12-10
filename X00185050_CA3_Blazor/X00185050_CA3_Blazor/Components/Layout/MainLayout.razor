@@ -1,4 +1,5 @@
 ﻿@inherits LayoutComponentBase
+@inject NavigationManager Navigation
 @rendermode InteractiveServer
 
 <div class="page">
@@ -9,8 +10,8 @@
         <div class="top-row">
             <div class="container-fluid">
                 <a class="navbar-brand px-3 border rounded-3" href="">TMDB Blazor</a>
-                <form class="d-flex" role="search">
-                    <input id="search-field" class="form-control me-2" type="search" placeholder="Search for movies..." aria-label="Search">
+                <form class="d-flex" role="search" @onsubmit="PerformSearch">
+                    <input id="search-field" class="form-control me-2" type="search" placeholder="Search for movies..." @bind="SearchQuery" aria-label="Search">
                     <button id="search-button" class="btn btn-outline-secondary" type="submit"><i class="bi bi-search"></i></button>
                 </form>
             </div>
@@ -46,4 +47,14 @@
     <a class="dismiss">🗙</a>
 </div>
 
+@code {
+    private string SearchQuery { get; set; } = string.Empty;
 
+    private void PerformSearch()
+    {
+        if (!string.IsNullOrWhiteSpace(SearchQuery))
+        {
+            Navigation.NavigateTo($"/search?query={SearchQuery}");
+        }
+    }
+}
