@@ -1,0 +1,1 @@
+C:\Users\waiho\source\repos\X00185050_CA3_Blazor\X00185050_CA3_Blazor\obj\Release\net8.0\browser-wasm\PubTmp\Out\web.config

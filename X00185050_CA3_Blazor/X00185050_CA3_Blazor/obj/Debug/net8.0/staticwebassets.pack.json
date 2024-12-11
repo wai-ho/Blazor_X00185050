@@ -1,28 +1,56 @@
 {
   "Files": [
     {
-      "Id": "C:\\Users\\waiho\\Blazor_X00185050\\X00185050_CA3_Blazor\\X00185050_CA3_Blazor\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\X00185050_CA3_Blazor.bundle.scp.css",
-      "PackagePath": "staticwebassets\\X00185050_CA3_Blazor.bundle.scp.css"
+      "Id": "C:\\Users\\waiho\\source\\repos\\X00185050_CA3_Blazor\\X00185050_CA3_Blazor\\bin\\Debug\\net8.0\\wwwroot\\_framework\\blazor.webassembly.js",
+      "PackagePath": "staticwebassets\\_framework\\blazor.webassembly.js"
     },
     {
-      "Id": "C:\\Users\\waiho\\Blazor_X00185050\\X00185050_CA3_Blazor\\X00185050_CA3_Blazor\\wwwroot\\Images\\placeholder.png",
+      "Id": "C:\\Users\\waiho\\source\\repos\\X00185050_CA3_Blazor\\X00185050_CA3_Blazor\\obj\\Debug\\net8.0\\compressed\\w2i04uyhap.gz",
+      "PackagePath": "staticwebassets\\_framework\\blazor.webassembly.js.gz"
+    },
+    {
+      "Id": "C:\\Users\\waiho\\source\\repos\\X00185050_CA3_Blazor\\X00185050_CA3_Blazor\\obj\\Debug\\net8.0\\scopedcss\\bundle\\X00185050_CA3_Blazor.styles.css",
+      "PackagePath": "staticwebassets\\X00185050_CA3_Blazor.styles.css"
+    },
+    {
+      "Id": "C:\\Users\\waiho\\source\\repos\\X00185050_CA3_Blazor\\X00185050_CA3_Blazor\\wwwroot\\Images\\placeholder.png",
       "PackagePath": "staticwebassets\\Images\\placeholder.png"
     },
     {
-      "Id": "C:\\Users\\waiho\\Blazor_X00185050\\X00185050_CA3_Blazor\\X00185050_CA3_Blazor\\wwwroot\\app.css",
-      "PackagePath": "staticwebassets\\app.css"
+      "Id": "C:\\Users\\waiho\\source\\repos\\X00185050_CA3_Blazor\\X00185050_CA3_Blazor\\wwwroot\\appsettings.Development.json",
+      "PackagePath": "staticwebassets\\appsettings.Development.json"
     },
     {
-      "Id": "C:\\Users\\waiho\\Blazor_X00185050\\X00185050_CA3_Blazor\\X00185050_CA3_Blazor\\wwwroot\\bootstrap\\bootstrap.min.css",
-      "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css"
+      "Id": "C:\\Users\\waiho\\source\\repos\\X00185050_CA3_Blazor\\X00185050_CA3_Blazor\\wwwroot\\appsettings.json",
+      "PackagePath": "staticwebassets\\appsettings.json"
     },
     {
-      "Id": "C:\\Users\\waiho\\Blazor_X00185050\\X00185050_CA3_Blazor\\X00185050_CA3_Blazor\\wwwroot\\bootstrap\\bootstrap.min.css.map",
-      "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css.map"
+      "Id": "C:\\Users\\waiho\\source\\repos\\X00185050_CA3_Blazor\\X00185050_CA3_Blazor\\wwwroot\\css\\app.css",
+      "PackagePath": "staticwebassets\\css\\app.css"
     },
     {
-      "Id": "C:\\Users\\waiho\\Blazor_X00185050\\X00185050_CA3_Blazor\\X00185050_CA3_Blazor\\wwwroot\\favicon.png",
+      "Id": "C:\\Users\\waiho\\source\\repos\\X00185050_CA3_Blazor\\X00185050_CA3_Blazor\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\waiho\\source\\repos\\X00185050_CA3_Blazor\\X00185050_CA3_Blazor\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\waiho\\source\\repos\\X00185050_CA3_Blazor\\X00185050_CA3_Blazor\\wwwroot\\favicon.png",
       "PackagePath": "staticwebassets\\favicon.png"
+    },
+    {
+      "Id": "C:\\Users\\waiho\\source\\repos\\X00185050_CA3_Blazor\\X00185050_CA3_Blazor\\wwwroot\\icon-192.png",
+      "PackagePath": "staticwebassets\\icon-192.png"
+    },
+    {
+      "Id": "C:\\Users\\waiho\\source\\repos\\X00185050_CA3_Blazor\\X00185050_CA3_Blazor\\wwwroot\\index.html",
+      "PackagePath": "staticwebassets\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\waiho\\source\\repos\\X00185050_CA3_Blazor\\X00185050_CA3_Blazor\\wwwroot\\sample-data\\weather.json",
+      "PackagePath": "staticwebassets\\sample-data\\weather.json"
     },
     {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.X00185050_CA3_Blazor.Microsoft.AspNetCore.StaticWebAssets.props",

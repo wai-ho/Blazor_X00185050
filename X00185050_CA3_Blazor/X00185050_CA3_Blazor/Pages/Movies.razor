@@ -1,0 +1,170 @@
+﻿@page "/movies"
+@inject HttpClient Http
+@inject IConfiguration Configuration
+@inject WatchlistService WatchlistService
+@using X00185050_CA3_Blazor.Services
+
+
+<h3>Popular Movies</h3>
+
+@if (movies == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <div class="row">
+        @foreach (var movie in movies.Results)
+        {
+            <div class="card-container col-md-3 mb-3">
+                <div class="card border border-secondary">
+                    <a href="/movies/@movie.Id" class="card-link">
+                        <img src="https://image.tmdb.org/t/p/w500/@movie.Poster_Path" class="card-img-top" alt="@movie.Title" />
+                    </a>
+                    <div class="card-body">
+                        <a href="/movies/@movie.Id" class="card-title h5 card-link">@movie.Title</a>
+                        <p>
+                            <span id="genre">
+                                @string.Join(", ", movie.Genres)
+                            </span>
+                        </p>
+                        <p class="card-text">
+                            <span class="border border-1 border-secondary rounded-3 p-1" 
+                            style="background-color: @(movie.Vote_Average switch {
+                                <= 0 => "lightgrey",
+                                > 0 and < 5 => "#FF1D18",
+                                >= 5 and < 6 =>  "#FF6865",
+                                >= 6 and < 7 => "#FFC78F",
+                                >= 7 and < 8 => "#83F28F",
+                                > 8 => "#00C04B",
+                                _ => "transparent"
+                            });">@movie.Vote_Average/10</span>
+                        </p>
+                        <p class="card-text">
+                            <span class="fw-bold">@movie.FormatDate()</span>
+                        </p>
+                        <button class="btn btn-primary btn-sm" @onclick="() => AddToWatchlist(movie.Id)">Add to Watchlist</button>
+
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+}
+
+@code {
+    private MovieResult? movies;
+    private Dictionary<int, string> GenreDictionary = new();
+    private string selectedSortOrder = "desc";
+
+    protected override async Task OnInitializedAsync()
+    {
+        await FetchGenres();
+        await FetchMovies();
+    }
+
+    private async Task FetchMovies()
+    {
+        try
+        {
+            var apiKey = Configuration["TMDB:APIKey"];
+            var apiUrl = $"https://api.themoviedb.org/3/movie/popular?api_key={apiKey}&language=en-US&page=1";
+
+            var movieResponse = await Http.GetFromJsonAsync<MovieResult>(apiUrl);
+            if (movieResponse != null)
+            {
+                foreach (var movie in movieResponse.Results)
+                {
+                    movie.Genres = movie.Genre_Ids
+                        .Where(id => GenreDictionary.ContainsKey(id))
+                        .Select(id => GenreDictionary[id])
+                        .ToList();
+                }
+
+                movies = new MovieResult
+                    {
+                        Results = selectedSortOrder == "asc"
+                        ? movieResponse.Results.OrderBy(movie => movie.Release_Date).ToList() 
+                        : movieResponse.Results.OrderByDescending(movie => movie.Release_Date).ToList() 
+                    };
+            }
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error fetching movies: {ex.Message}");
+        }
+    }
+
+    private async Task FetchGenres()
+    {
+        try
+        {
+            var apiKey = Configuration["TMDB:APIKey"];
+            var apiUrl = $"https://api.themoviedb.org/3/genre/movie/list?api_key={apiKey}&language=en-US";
+
+            var genreResponse = await Http.GetFromJsonAsync<GenreResponse>(apiUrl);
+            if (genreResponse != null)
+            {
+                GenreDictionary = genreResponse.Genres.ToDictionary(g => g.Id, g => g.Name);
+            }
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error fetching genres: {ex.Message}");
+        }
+    }
+
+    private void AddToWatchlist(int movieId)
+    {
+        WatchlistService.AddToWatchlist(movieId);
+    }
+
+
+    public class GenreResponse
+    {
+        public List<Genre> Genres { get; set; } = new();
+    }
+
+    public class Genre
+    {
+        public int Id { get; set; }
+        public string Name { get; set; } = string.Empty;
+    }
+
+    public class MovieResult
+    {
+        public List<Movie> Results { get; set; } = new();
+    }
+
+    public class Movie
+    {
+        public int Id { get; set; }
+        public string Title { get; set; } = string.Empty;
+        public string Poster_Path { get; set; } = string.Empty;
+        public double vote_Average;
+        public DateOnly Release_Date { get; set; }
+        public List<int> Genre_Ids { get; set; } = new();
+
+        public List<string> Genres { get; set; } = new();
+
+        public double Vote_Average
+        {
+            get => Math.Round(vote_Average, 1);
+            set => vote_Average = value;
+        }
+
+        public string FormatDate()
+        {
+            var date = Release_Date.ToDateTime(TimeOnly.MinValue);
+            int day = date.Day;
+            string suffix = day switch
+            {
+                1 or 21 or 31 => "st",
+                2 or 22 => "nd",
+                3 or 23 => "rd",
+                _ => "th"
+            };
+            return $"{day}{suffix} {date:MMMM yyyy}";
+        }
+    }
+}

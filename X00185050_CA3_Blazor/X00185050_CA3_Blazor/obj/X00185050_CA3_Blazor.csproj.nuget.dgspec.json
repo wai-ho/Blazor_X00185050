@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\waiho\\Blazor_X00185050\\X00185050_CA3_Blazor\\X00185050_CA3_Blazor\\X00185050_CA3_Blazor.csproj": {}
+    "C:\\Users\\waiho\\source\\repos\\X00185050_CA3_Blazor\\X00185050_CA3_Blazor\\X00185050_CA3_Blazor.csproj": {}
   },
   "projects": {
-    "C:\\Users\\waiho\\Blazor_X00185050\\X00185050_CA3_Blazor\\X00185050_CA3_Blazor\\X00185050_CA3_Blazor.csproj": {
+    "C:\\Users\\waiho\\source\\repos\\X00185050_CA3_Blazor\\X00185050_CA3_Blazor\\X00185050_CA3_Blazor.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\waiho\\Blazor_X00185050\\X00185050_CA3_Blazor\\X00185050_CA3_Blazor\\X00185050_CA3_Blazor.csproj",
+        "projectUniqueName": "C:\\Users\\waiho\\source\\repos\\X00185050_CA3_Blazor\\X00185050_CA3_Blazor\\X00185050_CA3_Blazor.csproj",
         "projectName": "X00185050_CA3_Blazor",
-        "projectPath": "C:\\Users\\waiho\\Blazor_X00185050\\X00185050_CA3_Blazor\\X00185050_CA3_Blazor\\X00185050_CA3_Blazor.csproj",
+        "projectPath": "C:\\Users\\waiho\\source\\repos\\X00185050_CA3_Blazor\\X00185050_CA3_Blazor\\X00185050_CA3_Blazor.csproj",
         "packagesPath": "C:\\Users\\waiho\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\waiho\\Blazor_X00185050\\X00185050_CA3_Blazor\\X00185050_CA3_Blazor\\obj\\",
+        "outputPath": "C:\\Users\\waiho\\source\\repos\\X00185050_CA3_Blazor\\X00185050_CA3_Blazor\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\waiho\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -45,6 +45,29 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Components.WebAssembly": {
+              "target": "Package",
+              "version": "[8.0.10, )"
+            },
+            "Microsoft.AspNetCore.Components.WebAssembly.DevServer": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.10, )"
+            },
+            "Microsoft.NET.ILLink.Tasks": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.10, )",
+              "autoReferenced": true
+            },
+            "Microsoft.NET.Sdk.WebAssembly.Pack": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.10, )",
+              "autoReferenced": true
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -56,15 +79,23 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.NETCore.App.Runtime.Mono.browser-wasm",
+              "version": "[8.0.10, 8.0.10]"
+            }
+          ],
           "frameworkReferences": {
-            "Microsoft.AspNetCore.App": {
-              "privateAssets": "none"
-            },
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
+        }
+      },
+      "runtimes": {
+        "browser-wasm": {
+          "#import": []
         }
       }
     }

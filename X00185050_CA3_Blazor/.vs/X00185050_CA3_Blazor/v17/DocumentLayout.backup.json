@@ -1,22 +1,14 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\waiho\\Blazor_X00185050\\X00185050_CA3_Blazor\\",
+  "WorkspaceRootPath": "C:\\Users\\waiho\\source\\repos\\X00185050_CA3_Blazor\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{DAD88708-44D5-4A8B-B9A5-9294BBEF15FA}|X00185050_CA3_Blazor\\X00185050_CA3_Blazor.csproj|c:\\users\\waiho\\blazor_x00185050\\x00185050_ca3_blazor\\x00185050_ca3_blazor\\components\\pages\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{DAD88708-44D5-4A8B-B9A5-9294BBEF15FA}|X00185050_CA3_Blazor\\X00185050_CA3_Blazor.csproj|solutionrelative:x00185050_ca3_blazor\\components\\pages\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{341F47FA-87B5-49EE-BA98-F9EE0BBC2A28}|X00185050_CA3_Blazor\\X00185050_CA3_Blazor.csproj|c:\\users\\waiho\\source\\repos\\x00185050_ca3_blazor\\x00185050_ca3_blazor\\layout\\mainlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{341F47FA-87B5-49EE-BA98-F9EE0BBC2A28}|X00185050_CA3_Blazor\\X00185050_CA3_Blazor.csproj|solutionrelative:x00185050_ca3_blazor\\layout\\mainlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DAD88708-44D5-4A8B-B9A5-9294BBEF15FA}|X00185050_CA3_Blazor\\X00185050_CA3_Blazor.csproj|c:\\users\\waiho\\blazor_x00185050\\x00185050_ca3_blazor\\x00185050_ca3_blazor\\components\\pages\\moviedetails.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{DAD88708-44D5-4A8B-B9A5-9294BBEF15FA}|X00185050_CA3_Blazor\\X00185050_CA3_Blazor.csproj|solutionrelative:x00185050_ca3_blazor\\components\\pages\\moviedetails.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DAD88708-44D5-4A8B-B9A5-9294BBEF15FA}|X00185050_CA3_Blazor\\X00185050_CA3_Blazor.csproj|c:\\users\\waiho\\blazor_x00185050\\x00185050_ca3_blazor\\x00185050_ca3_blazor\\components\\pages\\watchlist.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{DAD88708-44D5-4A8B-B9A5-9294BBEF15FA}|X00185050_CA3_Blazor\\X00185050_CA3_Blazor.csproj|solutionrelative:x00185050_ca3_blazor\\components\\pages\\watchlist.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DAD88708-44D5-4A8B-B9A5-9294BBEF15FA}|X00185050_CA3_Blazor\\X00185050_CA3_Blazor.csproj|c:\\users\\waiho\\blazor_x00185050\\x00185050_ca3_blazor\\x00185050_ca3_blazor\\wwwroot\\app.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{DAD88708-44D5-4A8B-B9A5-9294BBEF15FA}|X00185050_CA3_Blazor\\X00185050_CA3_Blazor.csproj|solutionrelative:x00185050_ca3_blazor\\wwwroot\\app.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+      "AbsoluteMoniker": "D:0:0:{341F47FA-87B5-49EE-BA98-F9EE0BBC2A28}|X00185050_CA3_Blazor\\X00185050_CA3_Blazor.csproj|c:\\users\\waiho\\source\\repos\\x00185050_ca3_blazor\\x00185050_ca3_blazor\\wwwroot\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{341F47FA-87B5-49EE-BA98-F9EE0BBC2A28}|X00185050_CA3_Blazor\\X00185050_CA3_Blazor.csproj|solutionrelative:x00185050_ca3_blazor\\wwwroot\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,7 +18,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -34,54 +26,29 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Watchlist.razor",
-              "DocumentMoniker": "C:\\Users\\waiho\\Blazor_X00185050\\X00185050_CA3_Blazor\\X00185050_CA3_Blazor\\Components\\Pages\\Watchlist.razor",
-              "RelativeDocumentMoniker": "X00185050_CA3_Blazor\\Components\\Pages\\Watchlist.razor",
-              "ToolTip": "C:\\Users\\waiho\\Blazor_X00185050\\X00185050_CA3_Blazor\\X00185050_CA3_Blazor\\Components\\Pages\\Watchlist.razor",
-              "RelativeToolTip": "X00185050_CA3_Blazor\\Components\\Pages\\Watchlist.razor",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAEUAAAAnAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "MainLayout.razor",
+              "DocumentMoniker": "C:\\Users\\waiho\\source\\repos\\X00185050_CA3_Blazor\\X00185050_CA3_Blazor\\Layout\\MainLayout.razor",
+              "RelativeDocumentMoniker": "X00185050_CA3_Blazor\\Layout\\MainLayout.razor",
+              "ToolTip": "C:\\Users\\waiho\\source\\repos\\X00185050_CA3_Blazor\\X00185050_CA3_Blazor\\Layout\\MainLayout.razor",
+              "RelativeToolTip": "X00185050_CA3_Blazor\\Layout\\MainLayout.razor",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAABMAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-11T16:04:16.338Z",
+              "WhenOpened": "2024-12-11T19:18:33.711Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "MovieDetails.razor",
-              "DocumentMoniker": "C:\\Users\\waiho\\Blazor_X00185050\\X00185050_CA3_Blazor\\X00185050_CA3_Blazor\\Components\\Pages\\MovieDetails.razor",
-              "RelativeDocumentMoniker": "X00185050_CA3_Blazor\\Components\\Pages\\MovieDetails.razor",
-              "ToolTip": "C:\\Users\\waiho\\Blazor_X00185050\\X00185050_CA3_Blazor\\X00185050_CA3_Blazor\\Components\\Pages\\MovieDetails.razor",
-              "RelativeToolTip": "X00185050_CA3_Blazor\\Components\\Pages\\MovieDetails.razor",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAAEkAAAA2AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-11T15:08:21.184Z",
+              "Title": "index.html",
+              "DocumentMoniker": "C:\\Users\\waiho\\source\\repos\\X00185050_CA3_Blazor\\X00185050_CA3_Blazor\\wwwroot\\index.html",
+              "RelativeDocumentMoniker": "X00185050_CA3_Blazor\\wwwroot\\index.html",
+              "ToolTip": "C:\\Users\\waiho\\source\\repos\\X00185050_CA3_Blazor\\X00185050_CA3_Blazor\\wwwroot\\index.html",
+              "RelativeToolTip": "X00185050_CA3_Blazor\\wwwroot\\index.html",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2024-12-11T19:19:23.439Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Home.razor",
-              "DocumentMoniker": "C:\\Users\\waiho\\Blazor_X00185050\\X00185050_CA3_Blazor\\X00185050_CA3_Blazor\\Components\\Pages\\Home.razor",
-              "RelativeDocumentMoniker": "X00185050_CA3_Blazor\\Components\\Pages\\Home.razor",
-              "ToolTip": "C:\\Users\\waiho\\Blazor_X00185050\\X00185050_CA3_Blazor\\X00185050_CA3_Blazor\\Components\\Pages\\Home.razor",
-              "RelativeToolTip": "X00185050_CA3_Blazor\\Components\\Pages\\Home.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-11T15:03:23.887Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "app.css",
-              "DocumentMoniker": "C:\\Users\\waiho\\Blazor_X00185050\\X00185050_CA3_Blazor\\X00185050_CA3_Blazor\\wwwroot\\app.css",
-              "RelativeDocumentMoniker": "X00185050_CA3_Blazor\\wwwroot\\app.css",
-              "ToolTip": "C:\\Users\\waiho\\Blazor_X00185050\\X00185050_CA3_Blazor\\X00185050_CA3_Blazor\\wwwroot\\app.css",
-              "RelativeToolTip": "X00185050_CA3_Blazor\\wwwroot\\app.css",
-              "ViewState": "AgIAAKgAAAAAAAAAAAAAALoAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-12-09T04:22:36.932Z"
             }
           ]
         }
