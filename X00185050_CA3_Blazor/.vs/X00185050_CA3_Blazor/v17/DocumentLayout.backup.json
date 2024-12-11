@@ -7,6 +7,14 @@
       "RelativeMoniker": "D:0:0:{DAD88708-44D5-4A8B-B9A5-9294BBEF15FA}|X00185050_CA3_Blazor\\X00185050_CA3_Blazor.csproj|solutionrelative:x00185050_ca3_blazor\\components\\pages\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{DAD88708-44D5-4A8B-B9A5-9294BBEF15FA}|X00185050_CA3_Blazor\\X00185050_CA3_Blazor.csproj|c:\\users\\waiho\\blazor_x00185050\\x00185050_ca3_blazor\\x00185050_ca3_blazor\\components\\pages\\moviedetails.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DAD88708-44D5-4A8B-B9A5-9294BBEF15FA}|X00185050_CA3_Blazor\\X00185050_CA3_Blazor.csproj|solutionrelative:x00185050_ca3_blazor\\components\\pages\\moviedetails.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DAD88708-44D5-4A8B-B9A5-9294BBEF15FA}|X00185050_CA3_Blazor\\X00185050_CA3_Blazor.csproj|c:\\users\\waiho\\blazor_x00185050\\x00185050_ca3_blazor\\x00185050_ca3_blazor\\components\\pages\\watchlist.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DAD88708-44D5-4A8B-B9A5-9294BBEF15FA}|X00185050_CA3_Blazor\\X00185050_CA3_Blazor.csproj|solutionrelative:x00185050_ca3_blazor\\components\\pages\\watchlist.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{DAD88708-44D5-4A8B-B9A5-9294BBEF15FA}|X00185050_CA3_Blazor\\X00185050_CA3_Blazor.csproj|c:\\users\\waiho\\blazor_x00185050\\x00185050_ca3_blazor\\x00185050_ca3_blazor\\wwwroot\\app.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
       "RelativeMoniker": "D:0:0:{DAD88708-44D5-4A8B-B9A5-9294BBEF15FA}|X00185050_CA3_Blazor\\X00185050_CA3_Blazor.csproj|solutionrelative:x00185050_ca3_blazor\\wwwroot\\app.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     }
@@ -18,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -26,12 +34,38 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Watchlist.razor",
+              "DocumentMoniker": "C:\\Users\\waiho\\Blazor_X00185050\\X00185050_CA3_Blazor\\X00185050_CA3_Blazor\\Components\\Pages\\Watchlist.razor",
+              "RelativeDocumentMoniker": "X00185050_CA3_Blazor\\Components\\Pages\\Watchlist.razor",
+              "ToolTip": "C:\\Users\\waiho\\Blazor_X00185050\\X00185050_CA3_Blazor\\X00185050_CA3_Blazor\\Components\\Pages\\Watchlist.razor",
+              "RelativeToolTip": "X00185050_CA3_Blazor\\Components\\Pages\\Watchlist.razor",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAEUAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-11T16:04:16.338Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MovieDetails.razor",
+              "DocumentMoniker": "C:\\Users\\waiho\\Blazor_X00185050\\X00185050_CA3_Blazor\\X00185050_CA3_Blazor\\Components\\Pages\\MovieDetails.razor",
+              "RelativeDocumentMoniker": "X00185050_CA3_Blazor\\Components\\Pages\\MovieDetails.razor",
+              "ToolTip": "C:\\Users\\waiho\\Blazor_X00185050\\X00185050_CA3_Blazor\\X00185050_CA3_Blazor\\Components\\Pages\\MovieDetails.razor",
+              "RelativeToolTip": "X00185050_CA3_Blazor\\Components\\Pages\\MovieDetails.razor",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAEkAAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-11T15:08:21.184Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Home.razor",
               "DocumentMoniker": "C:\\Users\\waiho\\Blazor_X00185050\\X00185050_CA3_Blazor\\X00185050_CA3_Blazor\\Components\\Pages\\Home.razor",
               "RelativeDocumentMoniker": "X00185050_CA3_Blazor\\Components\\Pages\\Home.razor",
-              "ToolTip": "C:\\Users\\waiho\\Blazor_X00185050\\X00185050_CA3_Blazor\\X00185050_CA3_Blazor\\Components\\Pages\\Home.razor*",
-              "RelativeToolTip": "X00185050_CA3_Blazor\\Components\\Pages\\Home.razor*",
+              "ToolTip": "C:\\Users\\waiho\\Blazor_X00185050\\X00185050_CA3_Blazor\\X00185050_CA3_Blazor\\Components\\Pages\\Home.razor",
+              "RelativeToolTip": "X00185050_CA3_Blazor\\Components\\Pages\\Home.razor",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-12-11T15:03:23.887Z",
@@ -39,7 +73,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "app.css",
               "DocumentMoniker": "C:\\Users\\waiho\\Blazor_X00185050\\X00185050_CA3_Blazor\\X00185050_CA3_Blazor\\wwwroot\\app.css",
               "RelativeDocumentMoniker": "X00185050_CA3_Blazor\\wwwroot\\app.css",
@@ -47,8 +81,7 @@
               "RelativeToolTip": "X00185050_CA3_Blazor\\wwwroot\\app.css",
               "ViewState": "AgIAAKgAAAAAAAAAAAAAALoAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-12-09T04:22:36.932Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-09T04:22:36.932Z"
             }
           ]
         }

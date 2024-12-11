@@ -5,7 +5,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
 <Project>
   <PropertyGroup>
     <_PublishTargetUrl>C:\Users\waiho\Blazor_X00185050\X00185050_CA3_Blazor\X00185050_CA3_Blazor\bin\Release\net8.0\publish\</_PublishTargetUrl>
-    <History>True|2024-12-11T04:36:35.8133252Z||;</History>
+    <History>True|2024-12-11T18:37:42.7287228Z||;True|2024-12-11T04:36:35.8133252+00:00||;</History>
     <LastFailureDetails />
   </PropertyGroup>
 </Project>
