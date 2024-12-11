@@ -1,0 +1,45 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\waiho\\Blazor_X00185050\\X00185050_CA3_Blazor\\X00185050_CA3_Blazor\\obj\\Release\\net8.0\\scopedcss\\projectbundle\\X00185050_CA3_Blazor.bundle.scp.css",
+      "PackagePath": "staticwebassets\\X00185050_CA3_Blazor.bundle.scp.css"
+    },
+    {
+      "Id": "C:\\Users\\waiho\\Blazor_X00185050\\X00185050_CA3_Blazor\\X00185050_CA3_Blazor\\wwwroot\\Images\\placeholder.png",
+      "PackagePath": "staticwebassets\\Images\\placeholder.png"
+    },
+    {
+      "Id": "C:\\Users\\waiho\\Blazor_X00185050\\X00185050_CA3_Blazor\\X00185050_CA3_Blazor\\wwwroot\\app.css",
+      "PackagePath": "staticwebassets\\app.css"
+    },
+    {
+      "Id": "C:\\Users\\waiho\\Blazor_X00185050\\X00185050_CA3_Blazor\\X00185050_CA3_Blazor\\wwwroot\\bootstrap\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\waiho\\Blazor_X00185050\\X00185050_CA3_Blazor\\X00185050_CA3_Blazor\\wwwroot\\bootstrap\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\waiho\\Blazor_X00185050\\X00185050_CA3_Blazor\\X00185050_CA3_Blazor\\wwwroot\\favicon.png",
+      "PackagePath": "staticwebassets\\favicon.png"
+    },
+    {
+      "Id": "obj\\Release\\net8.0\\staticwebassets\\msbuild.X00185050_CA3_Blazor.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Release\\net8.0\\staticwebassets\\msbuild.build.X00185050_CA3_Blazor.props",
+      "PackagePath": "build\\X00185050_CA3_Blazor.props"
+    },
+    {
+      "Id": "obj\\Release\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.X00185050_CA3_Blazor.props",
+      "PackagePath": "buildMultiTargeting\\X00185050_CA3_Blazor.props"
+    },
+    {
+      "Id": "obj\\Release\\net8.0\\staticwebassets\\msbuild.buildTransitive.X00185050_CA3_Blazor.props",
+      "PackagePath": "buildTransitive\\X00185050_CA3_Blazor.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
