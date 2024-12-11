@@ -54,7 +54,10 @@
     {
         if (!string.IsNullOrWhiteSpace(SearchQuery))
         {
-            Navigation.NavigateTo($"/search?query={SearchQuery}");
+            var encodedQuery = System.Web.HttpUtility.UrlEncode(SearchQuery.Trim());
+            Navigation.NavigateTo($"/search?query={encodedQuery}", true);
+
+
         }
     }
 }

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "en+wEkZqfebyKrRTEWzsunL3YVqAB4i5havyk12z4oA=",
+  "Hash": "A92QFN+BAud3kHRJyJ/4stlea9Y6EMUYkMg0hqVNAyI=",
   "Source": "X00185050_CA3_Blazor",
   "BasePath": "_content/X00185050_CA3_Blazor",
   "Mode": "Default",
@@ -129,6 +129,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.png"
+    },
+    {
+      "Identity": "C:\\Users\\waiho\\Blazor_X00185050\\X00185050_CA3_Blazor\\X00185050_CA3_Blazor\\wwwroot\\Images\\placeholder.png",
+      "SourceId": "X00185050_CA3_Blazor",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\waiho\\Blazor_X00185050\\X00185050_CA3_Blazor\\X00185050_CA3_Blazor\\wwwroot\\",
+      "BasePath": "_content/X00185050_CA3_Blazor",
+      "RelativePath": "Images/placeholder.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\placeholder.png"
     }
   ]
 }

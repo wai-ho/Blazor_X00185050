@@ -50,7 +50,6 @@ else
         {
             var movieIds = WatchlistService.GetWatchlist();
 
-        // Fetch each movie by its ID
         var tasks = movieIds.Select(id => FetchMovieDetails(id)).ToList();
         await Task.WhenAll(tasks);
         }

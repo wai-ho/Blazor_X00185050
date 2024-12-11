@@ -25,7 +25,9 @@ else
             <div class="card-container col-md-3 mb-3">
                 <div class="card border border-secondary">
                     <a href="/movies/@movie.Id" class="card-link">
-                        <img src="https://image.tmdb.org/t/p/w500/@movie.Poster_Path" class="card-img-top" alt="@movie.Title" />
+                        <img src="@(!string.IsNullOrEmpty(movie.Poster_Path) ? $"https://image.tmdb.org/t/p/w500/{movie.Poster_Path}" : "Images/placeholder.png")"
+                             class="card-img-top" alt="@movie.Title" />
+
                     </a>
                     <div class="card-body">
                         <a href="/movies/@movie.Id" class="card-title h5 card-link">@movie.Title</a>
@@ -69,6 +71,7 @@ else
 
         if (!string.IsNullOrEmpty(SearchQuery))
         {
+            await FetchGenres();
             await FetchSearchResults(SearchQuery);
         }
     }
@@ -78,11 +81,16 @@ else
         try
         {
             var apiKey = Configuration["TMDB:APIKey"];
-            var apiUrl = $"https://api.themoviedb.org/3/search/movie?api_key={apiKey}&query={query}&language=en-US";
+            var apiUrl = $"https://api.themoviedb.org/3/search/movie?api_key={apiKey}&query={Uri.EscapeDataString(query)}&language=en-US";
 
             var response = await Http.GetFromJsonAsync<SearchResponse>(apiUrl);
             if (response?.Results != null)
             {
+                foreach (var movie in response.Results)
+                {
+                    movie.Genres = movie.Genre_Ids.Select(id => GenreDictionary.TryGetValue(id, out var name) ? name : "Unknown").ToList();
+                }
+
                 movies = response.Results;
             }
         }
@@ -91,6 +99,39 @@ else
             Console.WriteLine($"Error fetching search results: {ex.Message}");
         }
     }
+
+    private Dictionary<int, string> GenreDictionary = new();
+
+    private async Task FetchGenres()
+    {
+        try
+        {
+            var apiKey = Configuration["TMDB:APIKey"];
+            var apiUrl = $"https://api.themoviedb.org/3/genre/movie/list?api_key={apiKey}&language=en-US";
+
+            var genreResponse = await Http.GetFromJsonAsync<GenreResponse>(apiUrl);
+            if (genreResponse != null)
+            {
+                GenreDictionary = genreResponse.Genres.ToDictionary(g => g.Id, g => g.Name);
+            }
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error fetching genres: {ex.Message}");
+        }
+    }
+
+    public class GenreResponse
+    {
+        public List<Genre> Genres { get; set; } = new();
+    }
+
+    public class Genre
+    {
+        public int Id { get; set; }
+        public string Name { get; set; } = string.Empty;
+    }
+
 
     public class SearchResponse
     {

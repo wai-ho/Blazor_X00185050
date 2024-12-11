@@ -8,13 +8,6 @@
 
 <h3>Popular Movies</h3>
 
-<div class="mb-3">
-    <select id="sortOrder" class="form-select w-auto">
-        <option value="desc">Sort By Release Date: Descending</option>
-        <option value="asc">Sort By Release Date: Ascending</option>
-    </select>
-</div>
-
 @if (movies == null)
 {
     <p><em>Loading...</em></p>
@@ -127,11 +120,6 @@ else
         WatchlistService.AddToWatchlist(movieId);
     }
 
-    private async Task SortMovies(ChangeEventArgs e)
-    {
-        selectedSortOrder = e.Value?.ToString() ?? "desc";
-        await FetchMovies();
-    }
 
     public class GenreResponse
     {
