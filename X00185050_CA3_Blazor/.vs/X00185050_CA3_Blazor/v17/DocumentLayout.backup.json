@@ -1,13 +1,13 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\waiho\\source\\repos\\X00185050_CA3_Blazor\\",
+  "WorkspaceRootPath": "C:\\Users\\waiho\\Blazor_X00185050\\X00185050_CA3_Blazor\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{341F47FA-87B5-49EE-BA98-F9EE0BBC2A28}|X00185050_CA3_Blazor\\X00185050_CA3_Blazor.csproj|c:\\users\\waiho\\source\\repos\\x00185050_ca3_blazor\\x00185050_ca3_blazor\\layout\\mainlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{341F47FA-87B5-49EE-BA98-F9EE0BBC2A28}|X00185050_CA3_Blazor\\X00185050_CA3_Blazor.csproj|solutionrelative:x00185050_ca3_blazor\\layout\\mainlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{341F47FA-87B5-49EE-BA98-F9EE0BBC2A28}|X00185050_CA3_Blazor\\X00185050_CA3_Blazor.csproj|c:\\users\\waiho\\blazor_x00185050\\x00185050_ca3_blazor\\x00185050_ca3_blazor\\wwwroot\\_framework\\\uFEFFblazor.webassembly.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{341F47FA-87B5-49EE-BA98-F9EE0BBC2A28}|X00185050_CA3_Blazor\\X00185050_CA3_Blazor.csproj|solutionrelative:x00185050_ca3_blazor\\wwwroot\\_framework\\\uFEFFblazor.webassembly.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{341F47FA-87B5-49EE-BA98-F9EE0BBC2A28}|X00185050_CA3_Blazor\\X00185050_CA3_Blazor.csproj|c:\\users\\waiho\\source\\repos\\x00185050_ca3_blazor\\x00185050_ca3_blazor\\wwwroot\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{341F47FA-87B5-49EE-BA98-F9EE0BBC2A28}|X00185050_CA3_Blazor\\X00185050_CA3_Blazor.csproj|c:\\users\\waiho\\blazor_x00185050\\x00185050_ca3_blazor\\x00185050_ca3_blazor\\wwwroot\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{341F47FA-87B5-49EE-BA98-F9EE0BBC2A28}|X00185050_CA3_Blazor\\X00185050_CA3_Blazor.csproj|solutionrelative:x00185050_ca3_blazor\\wwwroot\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
@@ -27,25 +27,25 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "MainLayout.razor",
-              "DocumentMoniker": "C:\\Users\\waiho\\source\\repos\\X00185050_CA3_Blazor\\X00185050_CA3_Blazor\\Layout\\MainLayout.razor",
-              "RelativeDocumentMoniker": "X00185050_CA3_Blazor\\Layout\\MainLayout.razor",
-              "ToolTip": "C:\\Users\\waiho\\source\\repos\\X00185050_CA3_Blazor\\X00185050_CA3_Blazor\\Layout\\MainLayout.razor",
-              "RelativeToolTip": "X00185050_CA3_Blazor\\Layout\\MainLayout.razor",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAABMAAAApAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-11T19:18:33.711Z",
+              "Title": "\uFEFFblazor.webassembly.js",
+              "DocumentMoniker": "C:\\Users\\waiho\\Blazor_X00185050\\X00185050_CA3_Blazor\\X00185050_CA3_Blazor\\wwwroot\\_framework\\\uFEFFblazor.webassembly.js",
+              "RelativeDocumentMoniker": "X00185050_CA3_Blazor\\wwwroot\\_framework\\\uFEFFblazor.webassembly.js",
+              "ToolTip": "C:\\Users\\waiho\\Blazor_X00185050\\X00185050_CA3_Blazor\\X00185050_CA3_Blazor\\wwwroot\\_framework\\\uFEFFblazor.webassembly.js",
+              "RelativeToolTip": "X00185050_CA3_Blazor\\wwwroot\\_framework\\\uFEFFblazor.webassembly.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwB4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-12-11T20:42:51.04Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "index.html",
-              "DocumentMoniker": "C:\\Users\\waiho\\source\\repos\\X00185050_CA3_Blazor\\X00185050_CA3_Blazor\\wwwroot\\index.html",
+              "DocumentMoniker": "C:\\Users\\waiho\\Blazor_X00185050\\X00185050_CA3_Blazor\\X00185050_CA3_Blazor\\wwwroot\\index.html",
               "RelativeDocumentMoniker": "X00185050_CA3_Blazor\\wwwroot\\index.html",
-              "ToolTip": "C:\\Users\\waiho\\source\\repos\\X00185050_CA3_Blazor\\X00185050_CA3_Blazor\\wwwroot\\index.html",
+              "ToolTip": "C:\\Users\\waiho\\Blazor_X00185050\\X00185050_CA3_Blazor\\X00185050_CA3_Blazor\\wwwroot\\index.html",
               "RelativeToolTip": "X00185050_CA3_Blazor\\wwwroot\\index.html",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAANAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
               "WhenOpened": "2024-12-11T19:19:23.439Z",
               "EditorCaption": ""

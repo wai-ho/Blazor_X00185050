@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\waiho\\source\\repos\\X00185050_CA3_Blazor\\X00185050_CA3_Blazor\\X00185050_CA3_Blazor.csproj": {}
+    "C:\\Users\\waiho\\Blazor_X00185050\\X00185050_CA3_Blazor\\X00185050_CA3_Blazor\\X00185050_CA3_Blazor.csproj": {}
   },
   "projects": {
-    "C:\\Users\\waiho\\source\\repos\\X00185050_CA3_Blazor\\X00185050_CA3_Blazor\\X00185050_CA3_Blazor.csproj": {
+    "C:\\Users\\waiho\\Blazor_X00185050\\X00185050_CA3_Blazor\\X00185050_CA3_Blazor\\X00185050_CA3_Blazor.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\waiho\\source\\repos\\X00185050_CA3_Blazor\\X00185050_CA3_Blazor\\X00185050_CA3_Blazor.csproj",
+        "projectUniqueName": "C:\\Users\\waiho\\Blazor_X00185050\\X00185050_CA3_Blazor\\X00185050_CA3_Blazor\\X00185050_CA3_Blazor.csproj",
         "projectName": "X00185050_CA3_Blazor",
-        "projectPath": "C:\\Users\\waiho\\source\\repos\\X00185050_CA3_Blazor\\X00185050_CA3_Blazor\\X00185050_CA3_Blazor.csproj",
+        "projectPath": "C:\\Users\\waiho\\Blazor_X00185050\\X00185050_CA3_Blazor\\X00185050_CA3_Blazor\\X00185050_CA3_Blazor.csproj",
         "packagesPath": "C:\\Users\\waiho\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\waiho\\source\\repos\\X00185050_CA3_Blazor\\X00185050_CA3_Blazor\\obj\\",
+        "outputPath": "C:\\Users\\waiho\\Blazor_X00185050\\X00185050_CA3_Blazor\\X00185050_CA3_Blazor\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\waiho\\AppData\\Roaming\\NuGet\\NuGet.Config",

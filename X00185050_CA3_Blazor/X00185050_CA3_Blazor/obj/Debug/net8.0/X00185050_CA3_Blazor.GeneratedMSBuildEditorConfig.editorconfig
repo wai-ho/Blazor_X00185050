@@ -13,47 +13,47 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = browser
 build_property.RootNamespace = X00185050_CA3_Blazor
 build_property.RootNamespace = X00185050_CA3_Blazor
-build_property.ProjectDir = C:\Users\waiho\source\repos\X00185050_CA3_Blazor\X00185050_CA3_Blazor\
+build_property.ProjectDir = C:\Users\waiho\Blazor_X00185050\X00185050_CA3_Blazor\X00185050_CA3_Blazor\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = false
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\waiho\source\repos\X00185050_CA3_Blazor\X00185050_CA3_Blazor
+build_property.MSBuildProjectDirectory = C:\Users\waiho\Blazor_X00185050\X00185050_CA3_Blazor\X00185050_CA3_Blazor
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/waiho/source/repos/X00185050_CA3_Blazor/X00185050_CA3_Blazor/App.razor]
+[C:/Users/waiho/Blazor_X00185050/X00185050_CA3_Blazor/X00185050_CA3_Blazor/App.razor]
 build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/waiho/source/repos/X00185050_CA3_Blazor/X00185050_CA3_Blazor/Pages/Home.razor]
+[C:/Users/waiho/Blazor_X00185050/X00185050_CA3_Blazor/X00185050_CA3_Blazor/Pages/Home.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSG9tZS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/waiho/source/repos/X00185050_CA3_Blazor/X00185050_CA3_Blazor/Pages/MovieDetails.razor]
+[C:/Users/waiho/Blazor_X00185050/X00185050_CA3_Blazor/X00185050_CA3_Blazor/Pages/MovieDetails.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTW92aWVEZXRhaWxzLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/waiho/source/repos/X00185050_CA3_Blazor/X00185050_CA3_Blazor/Pages/Movies.razor]
+[C:/Users/waiho/Blazor_X00185050/X00185050_CA3_Blazor/X00185050_CA3_Blazor/Pages/Movies.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTW92aWVzLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/waiho/source/repos/X00185050_CA3_Blazor/X00185050_CA3_Blazor/Pages/Search.razor]
+[C:/Users/waiho/Blazor_X00185050/X00185050_CA3_Blazor/X00185050_CA3_Blazor/Pages/Search.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2VhcmNoLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/waiho/source/repos/X00185050_CA3_Blazor/X00185050_CA3_Blazor/Pages/UpcomingMovies.razor]
+[C:/Users/waiho/Blazor_X00185050/X00185050_CA3_Blazor/X00185050_CA3_Blazor/Pages/UpcomingMovies.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVXBjb21pbmdNb3ZpZXMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/waiho/source/repos/X00185050_CA3_Blazor/X00185050_CA3_Blazor/Pages/Watchlist.razor]
+[C:/Users/waiho/Blazor_X00185050/X00185050_CA3_Blazor/X00185050_CA3_Blazor/Pages/Watchlist.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcV2F0Y2hsaXN0LnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/waiho/source/repos/X00185050_CA3_Blazor/X00185050_CA3_Blazor/_Imports.razor]
+[C:/Users/waiho/Blazor_X00185050/X00185050_CA3_Blazor/X00185050_CA3_Blazor/_Imports.razor]
 build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/waiho/source/repos/X00185050_CA3_Blazor/X00185050_CA3_Blazor/Layout/MainLayout.razor]
+[C:/Users/waiho/Blazor_X00185050/X00185050_CA3_Blazor/X00185050_CA3_Blazor/Layout/MainLayout.razor]
 build_metadata.AdditionalFiles.TargetPath = TGF5b3V0XE1haW5MYXlvdXQucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-x2i9xgs0zd
